@@ -11,10 +11,11 @@ export let loader: LoaderFunction = async () => {
       background_color: "#d3d7dd",
       theme_color: "#c34138",
       share_target: {
-        action: "/share-handler",
+        action: "/share",
         method: "GET",
         params: {
-          text: "description",
+          title: "title",
+          text: "text",
           url: "link",
         },
       },
