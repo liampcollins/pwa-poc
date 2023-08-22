@@ -11,6 +11,8 @@ export default function ShareHandler() {
       <h1>Share</h1>
       <p>URL: {params.url}</p>
       <p>{JSON.stringify(params)}</p>
+      <p>{window.location.href}</p>
+      <p>{window.location.search}</p>
     </div>
   );
 }
