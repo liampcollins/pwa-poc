@@ -1,4 +1,4 @@
-import { useLocation, useParams, useSearchParams } from "@remix-run/react";
+import { useLocation, useSearchParams } from "@remix-run/react";
 import React from "react";
 
 export default function ShareHandler() {
@@ -8,12 +8,8 @@ export default function ShareHandler() {
 
   // some nice UI that displays the url in the params object
   return (
-    <div>
-      <h1>Share</h1>
-      <p>URL: {location.search}</p>
-      {/* <p>{JSON.stringify(params)}</p>
-      <p>{JSON.stringify(location)}</p> */}
-      {/* <p>{location.search}</p> */}
+    <div style={{ padding: 5 }}>
+      <h1>URL RECEIVED: {(location.search || "").split("?text=")[1]}</h1>
     </div>
   );
 }
